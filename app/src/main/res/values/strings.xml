@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PlanRadarAssessment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tagCities">Cities</string>
+    <string name="tagAddCity">Add city</string>
+    <string name="description">Description</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="windspeed">Windspeed</string>
+</resources>

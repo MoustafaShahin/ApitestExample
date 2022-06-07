@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.shahin.plan_radar_assessment.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historicalDataFragment"
+            app:destination="@id/historicalDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.shahin.plan_radar_assessment.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+        <argument
+            android:name="details"
+            app:argType="com.shahin.plan_radar_assessment.data.dto.local.SavedDetails"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicalDataFragment"
+        android:name="com.shahin.plan_radar_assessment.ui.history.HistoricalDataFragment"
+        android:label="fragment_historical_data"
+        tools:layout="@layout/fragment_historical_data" >
+        <action
+            android:id="@+id/action_historicalDataFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+</navigation>
